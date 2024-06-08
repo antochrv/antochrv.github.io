@@ -1,0 +1,83 @@
+/* Existant */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #555;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea, form button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.carousel-container {
+    width: 60%; /* Ajustez la largeur comme vous le souhaitez */
+    margin: 0 auto; /* Centre le carousel */
+}
+
+.carousel {
+    margin-bottom: 20px; /* Ajoute une marge inférieure de 20px */
+}
+
+.carousel-item img {
+    height: 300px; /* Hauteur ajustée pour des images plus petites */
+    width: 100%; /* Assure que l'image prend toute la largeur du conteneur */
+    object-fit: contain; /* Assure que l'image n'est pas coupée */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px; /* Ajoute une marge supérieure de 20px */
+}
