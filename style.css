@@ -151,3 +151,19 @@ h1, h2, h3 {
     border: 1px solid #007bff;
     border-radius: 5px;
 }
+
+.simulation-section img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.sport-section img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}

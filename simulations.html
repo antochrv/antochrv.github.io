@@ -28,98 +28,120 @@
     <section class="container mt-5">
         <h2 class="text-center">Simulations</h2>
         <p class="text-center">Présentation des différentes simulations :</p>
-
         
-        <div class="simulation-section bg-light p-4 mb-4" id="dynamique-moleculaire">
-            <h3 class="accordion-toggle" data-target="#content-dynamique-moleculaire">Dynamique moléculaire</h3>
-            <div class="accordion-content" id="content-dynamique-moleculaire">
-                <p><strong>Introduction :</strong> La dynamique moléculaire (MD) est une méthode de simulation numérique utilisée pour étudier le comportement des atomes et des molécules au fil du temps.</p>
-                
-                <h4>Dynamique moléculaire classique</h4>
-                <p><strong>Étapes :</strong></p>
-                <ol>
-                    <li><strong>Initialisation :</strong> Définir les positions initiales et les vitesses des particules.</li>
-                    <li><strong>Force et Énergie :</strong> Calculer les forces et l'énergie entre les particules en utilisant un potentiel d'interaction approprié (par ex., Lennard-Jones).</li>
-                    <li><strong>Intégration :</strong> Utiliser un algorithme d'intégration (par ex., Verlet) pour mettre à jour les positions et les vitesses des particules.</li>
-                    <li><strong>Conditions aux Limites :</strong> Appliquer des conditions aux limites périodiques pour simuler un système infini.</li>
-                    <li><strong>Analyse :</strong> Analyser les résultats en termes de propriétés physiques (par ex., diffusion, structure radiale).</li>
-                </ol>
-                <p><strong>Applications :</strong> Étude des liquides, analyse des protéines, simulations de matériaux nanostructurés.</p>
-                
-                <h4>Méthode Monte Carlo</h4>
-                <p><strong>Étapes :</strong></p>
-                <ol>
-                    <li><strong>Initialisation :</strong> Définir les positions initiales des particules.</li>
-                    <li><strong>Déplacement :</strong> Proposer un déplacement aléatoire pour une particule sélectionnée au hasard.</li>
-                    <li><strong>Acceptation/Rejet :</strong> Calculer l'énergie du système après le déplacement et accepter ou rejeter le déplacement en utilisant un critère de Monte Carlo (par ex., critère de Metropolis).</li>
-                    <li><strong>Équilibrage :</strong> Répéter le processus jusqu'à ce que le système atteigne l'équilibre.</li>
-                    <li><strong>Analyse :</strong> Calculer les propriétés thermodynamiques (par ex., énergie libre, chaleur spécifique) en moyennant sur les configurations échantillonnées.</li>
-                </ol>
-                <p><strong>Applications :</strong> Simulation de transitions de phase, étude des systèmes à haute température, calcul des propriétés thermodynamiques.</p>
+        <div class="simulation-section bg-light p-4 mb-4 row" id="dynamique-moleculaire">
+            <div class="col-md-8">
+                <h3 class="accordion-toggle" data-target="#content-dynamique-moleculaire">Dynamique moléculaire</h3>
+                <div class="accordion-content" id="content-dynamique-moleculaire">
+                    <p><strong>Introduction :</strong> La dynamique moléculaire (MD) est une méthode de simulation numérique utilisée pour étudier le comportement des atomes et des molécules au fil du temps.</p>
+                    <h4>Dynamique moléculaire classique</h4>
+                    <p><strong>Étapes :</strong></p>
+                    <ol>
+                        <li><strong>Initialisation :</strong> Définir les positions initiales et les vitesses des particules.</li>
+                        <li><strong>Force et Énergie :</strong> Calculer les forces et l'énergie entre les particules en utilisant un potentiel d'interaction approprié (par ex., Lennard-Jones).</li>
+                        <li><strong>Intégration :</strong> Utiliser un algorithme d'intégration (par ex., Verlet) pour mettre à jour les positions et les vitesses des particules.</li>
+                        <li><strong>Conditions aux Limites :</strong> Appliquer des conditions aux limites périodiques pour simuler un système infini.</li>
+                        <li><strong>Analyse :</strong> Analyser les résultats en termes de propriétés physiques (par ex., diffusion, structure radiale).</li>
+                    </ol>
+                    <p><strong>Applications :</strong> Étude des liquides, analyse des protéines, simulations de matériaux nanostructurés.</p>
+                    <h4>Méthode Monte Carlo</h4>
+                    <p><strong>Étapes :</strong></p>
+                    <ol>
+                        <li><strong>Initialisation :</strong> Définir les positions initiales des particules.</li>
+                        <li><strong>Déplacement :</strong> Proposer un déplacement aléatoire pour une particule sélectionnée au hasard.</li>
+                        <li><strong>Acceptation/Rejet :</strong> Calculer l'énergie du système après le déplacement et accepter ou rejeter le déplacement en utilisant un critère de Monte Carlo (par ex., critère de Metropolis).</li>
+                        <li><strong>Équilibrage :</strong> Répéter le processus jusqu'à ce que le système atteigne l'équilibre.</li>
+                        <li><strong>Analyse :</strong> Calculer les propriétés thermodynamiques (par ex., énergie libre, chaleur spécifique) en moyennant sur les configurations échantillonnées.</li>
+                    </ol>
+                    <p><strong>Applications :</strong> Simulation de transitions de phase, étude des systèmes à haute température, calcul des propriétés thermodynamiques.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="images/MD.jpg" alt="Dynamique moléculaire" class="img-fluid">
             </div>
         </div>
 
-        <div class="simulation-section bg-light p-4 mb-4" id="mecanique-des-fluides">
-            <h3 class="accordion-toggle" data-target="#content-mecanique-des-fluides">Mécanique des fluides</h3>
-            <div class="accordion-content" id="content-mecanique-des-fluides">
-                <p><strong>Introduction :</strong> La mécanique des fluides est la branche de la physique qui étudie le mouvement des fluides (liquides et gaz) et les forces qui les animent.</p>
-                <p><strong>Étapes :</strong></p>
-                <ol>
-                    <li><strong>Modélisation :</strong> Définir les équations de Navier-Stokes pour décrire le mouvement du fluide.</li>
-                    <li><strong>Discrétisation :</strong> Discrétiser les équations en utilisant la méthode des différences finies.</li>
-                    <li><strong>Conditions Initiales et aux Limites :</strong> Spécifier les conditions initiales et aux limites pour le problème.</li>
-                    <li><strong>Résolution :</strong> Utiliser un solveur numérique pour résoudre les équations discrétisées.</li>
-                    <li><strong>Visualisation :</strong> Visualiser les résultats en termes de champs de vitesse et de pression.</li>
-                </ol>
-                <p><strong>Applications :</strong> Simulation des écoulements dans les tuyaux, prévision des conditions météorologiques, conception de systèmes de ventilation.</p>
+        <div class="simulation-section bg-light p-4 mb-4 row" id="mecanique-des-fluides">
+            <div class="col-md-8">
+                <h3 class="accordion-toggle" data-target="#content-mecanique-des-fluides">Mécanique des fluides</h3>
+                <div class="accordion-content" id="content-mecanique-des-fluides">
+                    <p><strong>Introduction :</strong> La mécanique des fluides est la branche de la physique qui étudie le mouvement des fluides (liquides et gaz) et les forces qui les animent.</p>
+                    <p><strong>Étapes :</strong></p>
+                    <ol>
+                        <li><strong>Modélisation :</strong> Définir les équations de Navier-Stokes pour décrire le mouvement du fluide.</li>
+                        <li><strong>Discrétisation :</strong> Discrétiser les équations en utilisant la méthode des différences finies.</li>
+                        <li><strong>Conditions Initiales et aux Limites :</strong> Spécifier les conditions initiales et aux limites pour le problème.</li>
+                        <li><strong>Résolution :</strong> Utiliser un solveur numérique pour résoudre les équations discrétisées.</li>
+                        <li><strong>Visualisation :</strong> Visualiser les résultats en termes de champs de vitesse et de pression.</li>
+                    </ol>
+                    <p><strong>Applications :</strong> Simulation des écoulements dans les tuyaux, prévision des conditions météorologiques, conception de systèmes de ventilation.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="images/fluids_dynamics.jpg" alt="Mécanique des fluides" class="img-fluid">
             </div>
         </div>
 
-        <div class="simulation-section bg-light p-4 mb-4" id="calcul-haute-performance">
-            <h3 class="accordion-toggle" data-target="#content-calcul-haute-performance">Calcul haute performance</h3>
-            <div class="accordion-content" id="content-calcul-haute-performance">
-                <p><strong>Introduction :</strong> Le calcul haute performance (HPC) utilise des supercalculateurs et des grappes d'ordinateurs pour résoudre des problèmes complexes en physique et en ingénierie.</p>
-                <p><strong>Étapes :</strong></p>
-                <ol>
-                    <li><strong>Décomposition du Problème :</strong> Diviser le problème en sous-problèmes plus petits.</li>
-                    <li><strong>Parallélisation :</strong> Utiliser des techniques de parallélisation (par ex., MPI, OpenMP) pour exécuter les sous-problèmes en parallèle.</li>
-                    <li><strong>Optimisation :</strong> Optimiser le code pour améliorer les performances (par ex., utilisation efficace de la mémoire, réduction des communications inter-processus).</li>
-                    <li><strong>Exécution :</strong> Exécuter le code sur un supercalculateur ou une grappe de calcul.</li>
-                    <li><strong>Analyse :</strong> Analyser les performances et les résultats des simulations.</li>
-                </ol>
-                <p><strong>Applications :</strong> Modélisation climatique, simulation de crash-tests de véhicules, calcul de la dynamique des protéines.</p>
+        <div class="simulation-section bg-light p-4 mb-4 row" id="calcul-haute-performance">
+            <div class="col-md-8">
+                <h3 class="accordion-toggle" data-target="#content-calcul-haute-performance">Calcul haute performance</h3>
+                <div class="accordion-content" id="content-calcul-haute-performance">
+                    <p><strong>Introduction :</strong> Le calcul haute performance (HPC) utilise des supercalculateurs et des grappes d'ordinateurs pour résoudre des problèmes complexes en physique et en ingénierie.</p>
+                    <p><strong>Étapes :</strong></p>
+                    <ol>
+                        <li><strong>Décomposition du Problème :</strong> Diviser le problème en sous-problèmes plus petits.</li>
+                        <li><strong>Parallélisation :</strong> Utiliser des techniques de parallélisation (par ex., MPI, OpenMP) pour exécuter les sous-problèmes en parallèle.</li>
+                        <li><strong>Optimisation :</strong> Optimiser le code pour améliorer les performances (par ex., utilisation efficace de la mémoire, réduction des communications inter-processus).</li>
+                        <li><strong>Exécution :</strong> Exécuter le code sur un supercalculateur ou une grappe de calcul.</li>
+                        <li><strong>Analyse :</strong> Analyser les performances et les résultats des simulations.</li>
+                    </ol>
+                    <p><strong>Applications :</strong> Modélisation climatique, simulation de crash-tests de véhicules, calcul de la dynamique des protéines.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="images/gpu.jpg" alt="Calcul haute performance" class="img-fluid">
             </div>
         </div>
 
-        <div class="simulation-section bg-light p-4 mb-4" id="structure-quantique">
-            <h3 class="accordion-toggle" data-target="#content-structure-quantique">Structure quantique</h3>
-            <div class="accordion-content" id="content-structure-quantique">
-                <p><strong>Introduction :</strong> La structure quantique étudie les propriétés des systèmes à l'échelle quantique, tels que les atomes et les molécules, en utilisant la mécanique quantique.</p>
-                <p><strong>Étapes :</strong></p>
-                <ol>
-                    <li><strong>Modélisation :</strong> Définir le Hamiltonien du système.</li>
-                    <li><strong>Résolution de l'Équation de Schrödinger :</strong> Utiliser la méthode des différences finies pour résoudre l'équation de Schrödinger.</li>
-                    <li><strong>Analyse des États :</strong> Analyser les fonctions d'onde et les niveaux d'énergie obtenus.</li>
-                    <li><strong>Propriétés Physiques :</strong> Calculer les propriétés physiques telles que les moments dipolaires, les spectres d'absorption.</li>
-                    <li><strong>Validation :</strong> Comparer les résultats avec des données expérimentales ou d'autres méthodes théoriques.</li>
-                </ol>
-                <p><strong>Applications :</strong> Étude des propriétés électroniques des matériaux, simulation des réactions chimiques, conception de dispositifs à l'échelle nanométrique.</p>
+        <div class="simulation-section bg-light p-4 mb-4 row" id="structure-quantique">
+            <div class="col-md-8">
+                <h3 class="accordion-toggle" data-target="#content-structure-quantique">Structure quantique</h3>
+                <div class="accordion-content" id="content-structure-quantique">
+                    <p><strong>Introduction :</strong> La structure quantique étudie les propriétés des systèmes à l'échelle quantique, tels que les atomes et les molécules, en utilisant la mécanique quantique.</p>
+                    <p><strong>Étapes :</strong></p>
+                    <ol>
+                        <li><strong>Modélisation :</strong> Définir le Hamiltonien du système.</li>
+                        <li><strong>Résolution de l'Équation de Schrödinger :</strong> Utiliser la méthode des différences finies pour résoudre l'équation de Schrödinger.</li>
+                        <li><strong>Analyse des États :</strong> Analyser les fonctions d'onde et les niveaux d'énergie obtenus.</li>
+                        <li><strong>Propriétés Physiques :</strong> Calculer les propriétés physiques telles que les moments dipolaires, les spectres d'absorption.</li>
+                        <li><strong>Validation :</strong> Comparer les résultats avec des données expérimentales ou d'autres méthodes théoriques.</li>
+                    </ol>
+                    <p><strong>Applications :</strong> Étude des propriétés électroniques des matériaux, simulation des réactions chimiques, conception de dispositifs à l'échelle nanométrique.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="images/Multiple_quantum_well.jpg" alt="Structure quantique" class="img-fluid">
             </div>
         </div>
 
-        <div class="simulation-section bg-light p-4 mb-4" id="electromagnetisme">
-            <h3 class="accordion-toggle" data-target="#content-electromagnetisme">Électromagnétisme</h3>
-            <div class="accordion-content" id="content-electromagnetisme">
-                <p><strong>Introduction :</strong> L'électromagnétisme est l'étude des champs électriques et magnétiques et de leurs interactions avec la matière.</p>
-                <p><strong>Étapes :</strong></p>
-                <ol>
-                    <li><strong>Modélisation :</strong> Définir les équations de Maxwell pour le système.</li>
-                    <li><strong>Discrétisation :</strong> Discrétiser les équations en utilisant la méthode des différences finies dans le domaine temporel (FDTD).</li>
-                    <li><strong>Conditions aux Limites :</strong> Spécifier les conditions aux limites pour le problème.</li>
-                    <li><strong>Résolution :</strong> Utiliser un solveur numérique pour résoudre les équations discrétisées.</li>
-                    <li><strong>Analyse :</strong> Analyser les champs électriques et magnétiques obtenus.</li>
-                </ol>
-                <p><strong>Applications :</strong> Conception d'antennes, simulation des ondes électromagnétiques dans les matériaux, analyse des dispositifs optiques.</p>
+        <div class="simulation-section bg-light p-4 mb-4 row" id="electromagnetisme">
+            <div class="col-md-8">
+                <h3 class="accordion-toggle" data-target="#content-electromagnetisme">Électromagnétisme</h3>
+                <div class="accordion-content" id="content-electromagnetisme">
+                    <p><strong>Introduction :</strong> L'électromagnétisme est l'étude des champs électriques et magnétiques et de leurs interactions avec la matière.</p>
+                    <p><strong>Étapes :</strong></p>
+                    <ol>
+                        <li><strong>Modélisation :</strong> Définir les équations de Maxwell pour le système.</li>
+                        <li><strong>Discrétisation :</strong> Discrétiser les équations en utilisant la méthode des différences finies dans le domaine temporel (FDTD).</li>
+                        <li><strong>Conditions aux Limites :</strong> Spécifier les conditions aux limites pour le problème.</li>
+                        <li><strong>Résolution :</strong> Utiliser un solveur numérique pour résoudre les équations discrétisées.</li>
+                        <li><strong>Analyse :</strong> Analyser les champs électriques et magnétiques obtenus.</li>
+                    </ol>
+                    <p><strong>Applications :</strong> Conception d'antennes, simulation des ondes électromagnétiques dans les matériaux, analyse des dispositifs optiques.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="images/elec.png" alt="Électromagnétisme" class="img-fluid">
             </div>
         </div>
     </section>

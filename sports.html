@@ -4,43 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets Sportifs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">À Propos</a></li>
-                <li><a href="simulations.html">Simulations</a></li>
-                <li><a href="sports.html">Projets Sportifs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Mon Site</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À Propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="simulations.html">Simulations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sports.html">Projets Sportifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <section>
-        <h2>Projets Sportifs</h2>
-        
-        <h3>Courses marquantes</h3>
-        <p>Voici quelques-unes des courses les plus marquantes en triathlon et trail :</p>
-        <ul>
-            <li><strong>Embrunman :</strong> Un des triathlons les plus difficiles au monde, avec un parcours de 3,8 km de natation, 188 km de vélo avec 5000 m de dénivelé, et un marathon pour finir.</li>
-            <li><strong>MB Race 70Km :</strong> Une course de VTT exigeante dans les montagnes, connue pour ses montées raides et ses descentes techniques.</li>
-            <li><strong>Roc des Alpes Enduro :</strong> Une compétition d'enduro en VTT avec plusieurs étapes chronométrées dans les Alpes.</li>
-            <li><strong>Vélo Vert Festival 70km :</strong> Une course de VTT populaire offrant un mélange de terrains techniques et roulants dans un cadre magnifique.</li>
-        </ul>
+    <section class="container mt-5">
+        <h2 class="text-center">Projets Sportifs</h2>
 
-        <h3>Prochains objectifs</h3>
-        <p>Les objectifs sportifs à venir :</p>
-        <ul>
-            <li><strong>Ironman Nice 2024 :</strong> Un triathlon longue distance avec des défis uniques de natation, vélo et course à pied le long de la côte méditerranéenne.</li>
-            <li><strong>UTMB :</strong> Ultra-Trail du Mont-Blanc, une course d'ultra-trail autour du Mont-Blanc avec un parcours de 170 km et 10 000 m de dénivelé.</li>
-            <li><strong>Paris Marathon :</strong> Objectif de battre mon record personnel sur marathon dans cette course emblématique à travers la capitale française.</li>
-            <li><strong>Trail des Vosges :</strong> Une course de trail technique à travers les paysages montagneux des Vosges.</li>
-        </ul>
+        <div class="sport-section bg-light p-4 mb-4 row" id="courses-marquantes">
+            <div class="col-12">
+                <h3 class="accordion-toggle" data-target="#content-courses-marquantes">Courses marquantes</h3>
+                <div class="accordion-content" id="content-courses-marquantes">
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <p><strong>Embrunman :</strong> Un des triathlons les plus difficiles au monde, avec un parcours de 3,8 km de natation, 188 km de vélo avec 5000 m de dénivelé, 42km de course à pied.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="images/embrunman.JPG" alt="Embrunman" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <p><strong>MB Race 70Km :</strong> Une course de VTT exigeante dans les montagnes, connue pour ses montées raides et ses descentes techniques.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <p><strong>Roc des Alpes Enduro :</strong> Une compétition d'enduro en VTT avec plusieurs étapes chronométrées dans les Alpes.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="images/vtt.jpg" alt="Roc des Alpes Enduro" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <p><strong>Vélo Vert Festival 70km :</strong> Une course de VTT populaire offrant un mélange de terrains techniques et roulants dans un cadre magnifique.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <p><strong>Tignes Trail :</strong> Un trail de haute altitude au coeur de la station de Tignes.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="images/trail_tignes.jpg" alt="tignes" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sport-section bg-light p-4 mb-4 row" id="prochains-objectifs">
+            <div class="col-12">
+                <h3 class="accordion-toggle" data-target="#content-prochains-objectifs">Prochains objectifs</h3>
+                <div class="accordion-content" id="content-prochains-objectifs">
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <p><strong>Embrunman 2025 :</strong> Retour sur cette course deux ans après, dans le but d'améliorer le chrono fait en 2023.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="images/velo.jpg" alt="Embrunman 2025" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-8">
+                            <p><strong>UTMB :</strong> Ultra-Trail du Mont-Blanc, une course d'ultra-trail autour du Mont-Blanc avec un parcours de 170 km et 10 000 m de dénivelé.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="images/trail.jpg" alt="UTMB" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
-    <footer>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>&copy; 2024 Antoine CHARVIN</p>
     </footer>
+    <button onclick="backToTop()" id="btn-back-to-top" title="Go to top">Top</button>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
