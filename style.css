@@ -1,144 +1,107 @@
-/* Existant */
+/* Nouveau style.css avec un thème clair et harmonieux */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Couleur de fond mise à jour pour une meilleure apparence */
+    background-color: #EDE0D4;
+    color: #333333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    color: #343a40; /* Couleur du texte mise à jour pour une meilleure lisibilité */
 }
 
 header {
-    background-color: #343a40; /* Couleur mise à jour pour correspondre à la palette Bootstrap */
-    color: white;
+    background-color: #B0BEC5;
+    color: #333333;
     padding: 10px 0;
-    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #333333;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.hero {
-    background-color: #555;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+nav ul li a:hover {
+    background-color: #8D6E63;
 }
 
 section {
     padding: 20px;
     flex: 1;
-    margin-top: 20px; /* Ajout de marge supérieure pour espacement */
+    margin-top: 20px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-form input, form textarea, form button {
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.carousel-container {
-    width: 60%; /* Ajustez la largeur comme vous le souhaitez */
-    margin: 0 auto; /* Centre le carousel */
-}
-
-.carousel {
-    margin-bottom: 20px; /* Ajoute une marge inférieure de 20px */
-}
-
-.carousel-item img {
-    height: 300px; /* Hauteur ajustée pour des images plus petites */
-    width: 100%; /* Assure que l'image prend toute la largeur du conteneur */
-    object-fit: contain; /* Assure que l'image n'est pas coupée */
+.hero {
+    background-color: #8D6E63;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
 }
 
 footer {
-    background-color: #343a40; /* Couleur mise à jour pour correspondre à la palette Bootstrap */
-    color: white;
+    background-color: #B0BEC5;
+    color: #333333;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    margin-top: 20px; /* Ajoute une marge supérieure de 20px */
-}
-
-/* Nouveau */
-header .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
 }
 
 h1, h2, h3 {
-    color: #007bff; /* Couleur mise à jour pour correspondre à la palette Bootstrap */
+    color: #8D6E63;
 }
 
 .container {
     margin-top: 20px;
 }
 
-.nav-link {
-    font-size: 1.1rem;
-    margin: 0 10px;
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.simulation-section {
-    border-left: 5px solid #007bff; /* Ajout d'une bordure colorée pour chaque section */
-    border-radius: 5px; /* Coins arrondis pour un effet plus doux */
+.carousel-item img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.list-group-item a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.list-group-item a:hover {
-    text-decoration: underline;
-}
-
-/* Bouton "Retour en Haut de Page" */
 #btn-back-to-top {
-    display: none; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
-    z-index: 99; 
-    border: none; 
-    outline: none; 
-    background-color: #007bff; 
-    color: white; 
-    cursor: pointer; 
-    padding: 10px; 
-    border-radius: 5px; 
-    font-size: 18px; 
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #8D6E63;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
 #btn-back-to-top:hover {
-    background-color: #555; 
+    background-color: #6D4C41;
 }
 
-/* Styles pour l'accordéon */
 .accordion-toggle {
     cursor: pointer;
     margin-bottom: 10px;
@@ -146,21 +109,18 @@ h1, h2, h3 {
 }
 
 .accordion-content {
-    display: none; /* Les contenus sont masqués par défaut */
-    padding: 10px;
-    border: 1px solid #007bff;
-    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    padding: 0 15px;
 }
 
-.simulation-section img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+.accordion-content.open {
+    max-height: 500px; /* Ajustez selon le contenu */
+    padding: 10px 15px;
 }
 
-.sport-section img {
+.simulation-section img, .sport-section img {
     max-width: 100%;
     height: auto;
     border: 1px solid #ddd;

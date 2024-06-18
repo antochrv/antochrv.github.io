@@ -24,10 +24,23 @@ function backToTop() {
 document.querySelectorAll('.accordion-toggle').forEach(item => {
     item.addEventListener('click', event => {
         const target = document.querySelector(item.getAttribute('data-target'));
-        if (target.style.display === 'none' || target.style.display === '') {
-            target.style.display = 'block';
+        if (target.style.maxHeight) {
+            target.style.maxHeight = null;
+            target.classList.remove("open");
         } else {
-            target.style.display = 'none';
+            target.style.maxHeight = target.scrollHeight + "px";
+            target.classList.add("open");
         }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const accordions = document.querySelectorAll('.accordion-toggle');
+    accordions.forEach((accordion) => {
+        accordion.addEventListener('click', function () {
+            const content = document.querySelector(this.dataset.target);
+            content.classList.toggle('open');
+        });
     });
 });
