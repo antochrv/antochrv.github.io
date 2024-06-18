@@ -127,3 +127,33 @@ h1, h2, h3 {
     border-radius: 4px;
     padding: 5px;
 }
+
+/* Animation CSS pour les boutons */
+.btn-animated {
+    transition: transform 0.3s ease;
+}
+
+.btn-animated:hover {
+    transform: scale(1.1);
+}
+
+/* Animation CSS pour les images du carousel */
+.carousel-item img {
+    transition: transform 0.5s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Animation CSS pour les sections */
+.section-animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-animated.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
